@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset='utf-8'>
+<!-- <?php include_once('./result.php'); ?> -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@wasedazooland" />
+<meta property="og:url" content="https://local-ogp.firebaseapp.com/site/yxm6jsIiKaQnBJZPb0UV" />
+<meta property="og:title" content="わせだどうぶつパラダイス" />
+<meta property="og:description" content="記事の要約（ディスクリプション）" />
+<meta property="og:image" content="http://www.hama-midorinokyokai.or.jp/zoo/kanazawa/animal/assets_c/2016/01/173-2-thumb-450xauto-2615.jpg"/>
+<title>わせだどうぶつパラダイス</title>
+<link rel="stylesheet" href="./css/style.css">
+<script src="./index.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html"><img src="./img/logo_anipara.png" alt="わせだアニマルパラダイス"></a></h1>
+    </header>
+    <div id="wrapper">
+            <div id="studentidform">
+                <form name="fm1" method="get" action="result.html">
+                    <label for="studentid">学籍番号を入れてね（半角英数字で実際の学籍番号にしてよ）: </label><br>
+                    <input type="tel" pattern="^[1]" placeholder="1" size="2" maxlength="1" name="num1" onkeyup="setNextFocus(this)"  required/>
+                    <input type="text" pattern="[A-H, J-K, M-M, T-U, W-Y]" placeholder="A" size="2" maxlength="1" name="num2" onkeyup="setNextFocus(this); this.value = this.value.toUpperCase();">
+                    <input type="tel" pattern="^[0-9]+$" placeholder="1" size="2" maxlength="1" name="num3" onkeyup="setNextFocus(this)" required/>
+                    <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num4" onkeyup="setNextFocus(this)" required/>
+                    <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num5" onkeyup="setNextFocus(this)" required/>
+                    <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num6" onkeyup="setNextFocus(this)" required/>
+                    <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num7" onkeyup="setNextFocus(this)" required/>
+                    <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num8" onkeyup="setNextFocus(this)" required/>
+                    <a>-</a>
+                    <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num9" onkeyup="setNextFocus(this)" required/>
+                    <input type="submit" name="send" value="どうぶつさんになる">
+                </form>
+            <div id="img">
+                <img src="./img/wasedazooland.jpg" alt="わせだどうぶつえん" title="wasedazooland">
+            </div>
+            </div>
+        </div>
+</body>
+</html>
