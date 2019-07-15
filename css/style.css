@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+body {
+  margin: 5vw;
+}
+
 header {
   text-align: center;
   max-width: 100%;
@@ -29,9 +33,43 @@ header {
   }
 }
 
+header img {
+  max-width: 100%;
+}
+
 #wrapper {
   text-align: center;
   max-width: 100%;
   margin: 10 10;
+}
+
+#studentidform input {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#studentidform button {
+  width: 60vw;
+  height: 60vw;
+  max-height: 300px;
+  max-width: 300px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.2em;
+  background-color: #000;
+  color: #fff;
+  border-style: none;
+  margin: 10px 10px;
+}
+
+#output {
+  display: inline;
 }
 /*# sourceMappingURL=style.css.map */

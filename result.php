@@ -1,7 +1,5 @@
 <?php 
 
-//条件分岐
-$num1 = $_GET["num1"];
 switch ($_GET["num2"]){
     case "A":
         $num2 = 1;
@@ -28,29 +26,29 @@ switch ($_GET["num2"]){
         $num2 = 8;
         break;
     case "J":
-        $num2 = 9;
-        break;
-    case "K":
         $num2 = 10;
         break;
-    case "M":
+    case "K":
         $num2 = 11;
         break;
-    case "T":
-        $num2 = 12;
-        break;
-    case "U":
+    case "M":
         $num2 = 13;
         break;
+    case "T":
+        $num2 = 3;
+        break;
+    case "U":
+        $num2 = 4;
+        break;
     case "W":
-        $num2 = 14;
+        $num2 = 23;
         break;
     case "X":
-        $num2 = 15;
+        $num2 = 24;
         break;
     case "Y":
-        $num2 = 16;
-    break;
+        $num2 = 25;
+        break;
     }
 $num3 = $_GET["num3"];
 $num4 = $_GET["num4"];
@@ -58,11 +56,93 @@ $num5 = $_GET["num5"];
 $num6 = $_GET["num6"];
 $num7 = $_GET["num7"];
 $num8 = $_GET["num8"];
-$num9 = $_GET["num9"];
+
+//理工三学部の場合は入学年度の2桁を扱う
+if ($num2 >= 23 and $num2 <= 25) {
+    $year = $num3.$num4;
+} else {
+    $year = $num4;
+}
+
+//学部コードが英字の場合数字に変換する
+if ($num5 == "A") {
+    $num5 = 1;
+} else if ($num5 == "B"){
+    $num5 = 2;
+} else if ($num5 == "C"){
+    $num5 = 3;
+} else if ($num5 == "D"){
+    $num5 = 4;
+} else if ($num5 == "E"){
+    $num5 = 5;
+} else if ($num5 == "F"){
+    $num5 = 6;
+} else if ($num5 == "G"){
+    $num5 = 7;
+} else if ($num5 == "H"){
+    $num5 = 8;
+} else if ($num5 == "I"){
+    $num5 = 9;
+} else if ($num5 == "J"){
+    $num5 = 10;
+} else if ($num5 == "K"){
+    $num5 = 11;
+} else if ($num5 == "L"){
+    $num5 = 12;
+} else if ($num5 == "M"){
+    $num5 = 13;
+} else if ($num5 == "N"){
+    $num5 = 14;
+} else if ($num5 == "O"){
+    $num5 = 15;
+} else if ($num5 == "P"){
+    $num5 = 16;
+} else if ($num5 == "Q"){
+    $num5 = 17;
+} else if ($num5 == "R"){
+    $num5 = 18;
+} else if ($num5 == "S"){
+    $num5 = 19;
+} else if ($num5 == "T"){
+    $num5 = 20;
+} else if ($num5 == "U"){
+    $num5 = 21;
+} else if ($num5 == "V"){
+    $num5 = 22;
+} else if ($num5 == "W"){
+    $num5 = 23;
+} else if ($num5 == "X"){
+    $num5 = 24;
+} else if ($num5 == "Y"){
+    $num5 = 25;
+} else if ($num5 == "Z"){
+    $num5 = 26;
+} else {
+    $num5 = $num5;
+}
+
+$cd1 = $num2 * 2;
+$cd2 = $year * 3;
+$cd3 = $num5 * 4;
+$cd4 = $num6 * 5;
+$cd5 = $num7 * 6;
+$cd6 = $num8 * 7;
+$cd7 = $cd1 + $cd2 + $cd3 + $cd4 + $cd5 + $cd6;
+$cd8 = $cd7 % 11;
+$cd9 = 11 - $cd8;
+$num9 = substr($cd9, -1);
 
 //学籍番号
 $facultycode = $_GET["num2"];
-$studentid = $num1.$facultycode.$num3.$num4.$num5.$num6.$num7.$num8.$num9;
+$studentid = '1'.$facultycode.$num3.$num4.$num5.$num6.$num7.$num8.-$num9;
+
+
+
+
+
+
+
+
 echo $studentid;
 
 //画像のベース生成
@@ -610,7 +690,7 @@ if ($num2 == 8) {
     }
 }
 //J学部の時のframe1の色を指定
-if ($num2 == 9) {
+if ($num2 == 10) {
     if($num6 == 2) {
         $frame1 = imagecolorallocate($dst_img, 234, 85, 20);
     } else if($num6 == 3) {
@@ -678,7 +758,7 @@ if ($num2 == 9) {
     }
 }
 //K学部の時のframe1の色を指定
-if ($num2 == 10) {
+if ($num2 == 11) {
     if($num6 == 1) {
         $frame1 = imagecolorallocate($dst_img, 234, 85, 20);
     } else if($num6 == 2) {
@@ -746,7 +826,7 @@ if ($num2 == 10) {
     }
 }
 //M学部の時のframe1の色を指定
-if ($num2 == 11) {
+if ($num2 == 13) {
     if($num6 == 0) {
         $frame1 = imagecolorallocate($dst_img, 234, 85, 20);
     } else if($num6 == 2) {
@@ -814,7 +894,7 @@ if ($num2 == 11) {
     }
 }
 //T学部の時のframe1の色を指定
-if ($num2 == 12) {
+if ($num2 == 20) {
     if($num6 == 1) {
         $frame1 = imagecolorallocate($dst_img, 234, 85, 20);
     } else if($num6 == 8) {
@@ -882,7 +962,7 @@ if ($num2 == 12) {
     }
 }
 //U学部の時のframe1の色を指定
-if ($num2 == 13) {
+if ($num2 == 21) {
     if($num6 == 2) {
         $frame1 = imagecolorallocate($dst_img, 234, 85, 20);
     } else if($num6 == 3) {
@@ -950,7 +1030,7 @@ if ($num2 == 13) {
     }
 }
 //W学部の時のframe1の色を指定
-if ($num2 == 14) {
+if ($num2 == 23) {
     if($num6 == 4) {
         $frame1 = imagecolorallocate($dst_img, 234, 85, 20);
     } else if($num6 == 0) {
@@ -1018,7 +1098,7 @@ if ($num2 == 14) {
     }
 }
 //X学部の時のframe1の色を指定
-if ($num2 == 15) {
+if ($num2 == 24) {
     if($num6 == 5) {
         $frame1 = imagecolorallocate($dst_img, 234, 85, 20);
     } else if($num6 == 3) {
@@ -1086,7 +1166,7 @@ if ($num2 == 15) {
     }
 }
 //Y学部の時のframe1の色を指定
-if ($num2 == 16) {
+if ($num2 == 25) {
     if($num6 == 6) {
         $frame1 = imagecolorallocate($dst_img, 234, 85, 20);
     } else if($num6 == 0) {
@@ -1164,31 +1244,31 @@ imagefilledarc($dst_img, 505, 505, 840, 840, 0, 360, $frame3, IMG_ARC_PIE);
 imagefilledarc($dst_img, 505, 505, 768, 768, 0, 360, $boderColor, IMG_ARC_PIE);
 
 //背景の指定と描画
-if ($num9 == 0) {
+if ($num7 == 0) {
     $bg = imagecreatefrompng("./img/bg/bg00.png");
     imagecopy($dst_img, $bg, 0, 0, 0, 0, 1010, 1010);
-} elseif ($num9 == 1) {
+} elseif ($num7 == 1) {
     $bg = imagecreatefrompng("./img/bg/bg01.png");
     imagecopy($dst_img, $bg, 0, 0, 0, 0, 1010, 1010); 
-} elseif ($num9 == 2) {
+} elseif ($num7 == 2) {
     $bg = imagecreatefrompng("./img/bg/bg02.png");
     imagecopy($dst_img, $bg, 0, 0, 0, 0, 1010, 1010); 
-} elseif ($num9 == 3) {
+} elseif ($num7 == 3) {
     $bg = imagecreatefrompng("./img/bg/bg03.png");
     imagecopy($dst_img, $bg, 0, 0, 0, 0, 1010, 1010); 
-} elseif ($num9 == 4) {
+} elseif ($num7 == 4) {
     $bg = imagecreatefrompng("./img/bg/bg04.png");
     imagecopy($dst_img, $bg, 0, 0, 0, 0, 1010, 1010); 
-} elseif ($num9 == 5) {
+} elseif ($num7 == 5) {
     $bg = imagecreatefrompng("./img/bg/bg05.png");
     imagecopy($dst_img, $bg, 0, 0, 0, 0, 1010, 1010); 
-} elseif ($num9 == 6) {
+} elseif ($num7 == 6) {
     $bg = imagecreatefrompng("./img/bg/bg06.png");
     imagecopy($dst_img, $bg, 0, 0, 0, 0, 1010, 1010); 
-} elseif ($num9 == 7) {
+} elseif ($num7 == 7) {
     $bg = imagecreatefrompng("./img/bg/bg07.png");
     imagecopy($dst_img, $bg, 0, 0, 0, 0, 1010, 1010); 
-} elseif ($num9 == 8) {
+} elseif ($num7 == 8) {
     $bg = imagecreatefrompng("./img/bg/bg08.png");
     imagecopy($dst_img, $bg, 0, 0, 0, 0, 1010, 1010); 
 } else {

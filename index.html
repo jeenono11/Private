@@ -21,24 +21,34 @@
     </header>
     <div id="wrapper">
             <div id="studentidform">
-                <form name="fm1" method="get" action="result.html">
-                    <label for="studentid">学籍番号を入れてね（半角英数字で実際の学籍番号にしてよ）: </label><br>
-                    <input type="tel" pattern="^[1]" placeholder="1" size="2" maxlength="1" name="num1" onkeyup="setNextFocus(this)"  required/>
-                    <input type="text" pattern="[A-H, J-K, M-M, T-U, W-Y]" placeholder="A" size="2" maxlength="1" name="num2" onkeyup="setNextFocus(this); this.value = this.value.toUpperCase();">
+                <form class="number" name="fm1" method="get" action="result.html">
+                    <label for="studentid">学籍番号を入れてね</label><br>
+                    <select id="num2" name="num2" onchange="selectboxChange();">
+                        <option>---</option>
+                        <option value="A">政治経済学部</option>
+                        <option value="B">法学部</option>
+                        <option value="E">教育学部</option>
+                        <option value="F">商学部</option>
+                        <option value="H">社会科学部</option>
+                        <option value="J">人間科学部</option>
+                        <option value="K">スポーツ科学部</option>
+                        <option value="M">国際教養学部</option>
+                        <option value="T">文化構想学部</option>
+                        <option value="U">文学部</option>
+                        <option value="W">基幹理工学部</option>
+                        <option value="X">創造理工学部</option>
+                        <option value="Y">先進理工学部</option>
+                    </select>
+                <div id="output"></div>
                     <input type="tel" pattern="^[0-9]+$" placeholder="1" size="2" maxlength="1" name="num3" onkeyup="setNextFocus(this)" required/>
-                    <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num4" onkeyup="setNextFocus(this)" required/>
-                    <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num5" onkeyup="setNextFocus(this)" required/>
+                    <input type="tel" pattern="^[0-9]+$" placeholder="6" size="2" maxlength="1" name="num4" onkeyup="setNextFocus(this)" required/>
+                    <input type="tel" placeholder="0" size="2" maxlength="1" name="num5" onkeyup="setNextFocus(this)" required/>
                     <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num6" onkeyup="setNextFocus(this)" required/>
                     <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num7" onkeyup="setNextFocus(this)" required/>
                     <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num8" onkeyup="setNextFocus(this)" required/>
-                    <a>-</a>
-                    <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num9" onkeyup="setNextFocus(this)" required/>
-                    <input type="submit" name="send" value="どうぶつさんになる">
+                    <button type="submit" name="send" value="code">どうぶつさんに<br>なる</button>
                 </form>
-            <div id="img">
-                <img src="./img/wasedazooland.jpg" alt="わせだどうぶつえん" title="wasedazooland">
             </div>
-            </div>
-        </div>
+    </div>
 </body>
 </html>
