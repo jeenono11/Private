@@ -55,3 +55,14 @@ function selectboxChange() {
           break;                  
   }
 }
+
+function myfunc() {
+  var index = document.getElementById("hidden_show").selectedIndex;
+  var value = document.getElementById("hidden_show").value;
+  var obj = document.getElementById("hidden_show");
+  console.log("active");
+  var list = obj.classList;
+  console.log(list);
+  obj.classList.add("hidden_show_active");
+  console.log(obj.classList);
+}

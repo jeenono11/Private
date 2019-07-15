@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -71,5 +72,25 @@ header img {
 
 #output {
   display: inline;
+}
+
+/*チェックは見えなくする*/
+/*中身を非表示にしておく*/
+.hidden_show {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden_show_active {
+  padding: 10px 0;
+  height: auto;
+  opacity: 1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 /*# sourceMappingURL=style.css.map */

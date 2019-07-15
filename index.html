@@ -21,9 +21,9 @@
     </header>
     <div id="wrapper">
             <div id="studentidform">
-                <form class="number" name="fm1" method="get" action="result.html">
-                    <label for="studentid">学籍番号を入れてね</label><br>
-                    <select id="num2" name="num2" onchange="selectboxChange();">
+                <form class="number" name="fm1" method="get" action="result.html" onchange="selectboxChange();">
+                    <label>学部を選択してね</label>
+                    <select id="fuculty" name="num2" onchange="myfunc();">
                         <option>---</option>
                         <option value="A">政治経済学部</option>
                         <option value="B">法学部</option>
@@ -39,15 +39,18 @@
                         <option value="X">創造理工学部</option>
                         <option value="Y">先進理工学部</option>
                     </select>
-                <div id="output"></div>
-                    <input type="tel" pattern="^[0-9]+$" placeholder="1" size="2" maxlength="1" name="num3" onkeyup="setNextFocus(this)" required/>
-                    <input type="tel" pattern="^[0-9]+$" placeholder="6" size="2" maxlength="1" name="num4" onkeyup="setNextFocus(this)" required/>
-                    <input type="tel" placeholder="0" size="2" maxlength="1" name="num5" onkeyup="setNextFocus(this)" required/>
-                    <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num6" onkeyup="setNextFocus(this)" required/>
-                    <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num7" onkeyup="setNextFocus(this)" required/>
-                    <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num8" onkeyup="setNextFocus(this)" required/>
-                    <button type="submit" name="send" value="code">どうぶつさんに<br>なる</button>
+                    <div id="hidden_show" class="hidden_show">
+                      <!--非表示ここから-->
+                            <div id="output"></div>
+                            <input type="tel" pattern="^[0-9]+$" placeholder="1" size="2" maxlength="1" name="num3" onkeyup="setNextFocus(this)" required/>
+                            <input type="tel" pattern="^[0-9]+$" placeholder="6" size="2" maxlength="1" name="num4" onkeyup="setNextFocus(this)" required/>
+                            <input type="tel" placeholder="0" size="2" maxlength="1" name="num5" onkeyup="setNextFocus(this)" required/>
+                            <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num6" onkeyup="setNextFocus(this)" required/>
+                            <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num7" onkeyup="setNextFocus(this)" required/>
+                            <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num8" onkeyup="setNextFocus(this)" required/>
+                            <button type="submit" name="send" value="code">どうぶつさんに<br>なる</button>
                 </form>
+                      <!--ここまで-->
             </div>
     </div>
 </body>
