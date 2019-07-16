@@ -66,3 +66,14 @@ function myfunc() {
   obj.classList.add("hidden_show_active");
   console.log(obj.classList);
 }
+
+$(function(){
+  $('.js-modal-open').on('click',function(){
+      $('.js-modal').fadeIn();
+      return false;
+  });
+  $('.js-modal-close').on('click',function(){
+      $('.js-modal').fadeOut();
+      return false;
+  });
+});

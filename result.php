@@ -50,12 +50,14 @@ switch ($_GET["num2"]){
         $num2 = 25;
         break;
     }
-$num3 = $_GET["num3"];
-$num4 = $_GET["num4"];
-$num5 = $_GET["num5"];
-$num6 = $_GET["num6"];
-$num7 = $_GET["num7"];
-$num8 = $_GET["num8"];
+
+$NumOrigin = $_GET["NumOrigin"];
+$num3 = substr($NumOrigin,0,1);
+$num4 = substr($NumOrigin,1,1);
+$num5 = substr($NumOrigin,2,1);
+$num6 = substr($NumOrigin,3,1);
+$num7 = substr($NumOrigin,4,1);
+$num8 = substr($NumOrigin,5,1);
 
 //理工三学部の場合は入学年度の2桁を扱う
 if ($num2 >= 23 and $num2 <= 25) {
@@ -135,15 +137,6 @@ $num9 = substr($cd9, -1);
 //学籍番号
 $facultycode = $_GET["num2"];
 $studentid = '1'.$facultycode.$num3.$num4.$num5.$num6.$num7.$num8.-$num9;
-
-
-
-
-
-
-
-
-echo $studentid;
 
 //画像のベース生成
 $dst_img = imagecreatetruecolor(1010, 1010);//空のキャンバスの作成
