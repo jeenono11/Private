@@ -133,11 +133,6 @@ header img {
   z-index: 3;
 }
 
-#wrapper {
-  text-align: center;
-  max-width: 100%;
-}
-
 #studentidform .cp_ipselect {
   overflow: hidden;
   width: 65%;
@@ -196,6 +191,15 @@ header img {
   color: #000;
 }
 
+#studentidform #num {
+  margin-top: 20px;
+}
+
+#studentidform #num #output {
+  font-size: 30px;
+  display: inline;
+}
+
 #studentidform button {
   width: 60vw;
   height: 60vw;
@@ -209,10 +213,6 @@ header img {
   border-style: none;
   margin: 10px 10px;
   z-index: 2;
-}
-
-#output {
-  display: inline;
 }
 
 /*中身を非表示にしておく*/
