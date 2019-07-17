@@ -100,3 +100,11 @@ $(function(){
   }
   setTimeout(loaderClose,10000);
 });
+
+function changeItem(obj){ 
+  if( obj.value == 0 ){ 
+      obj.style.color = ''; 
+  }else{ 
+      obj.style.color = '#ff0101'; 
+  } 
+} 

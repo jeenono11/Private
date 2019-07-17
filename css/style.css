@@ -107,6 +107,14 @@ html, body {
   width: 100%;
   height: 100%;
   text-align: center;
+  font-family: dnp-shuei-anti-std, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
 }
 
 header {
@@ -130,16 +138,62 @@ header img {
   max-width: 100%;
 }
 
-#studentidform input {
-  margin: 0;
-  padding: 0;
-  background: none;
+#studentidform .cp_ipselect {
+  overflow: hidden;
+  width: 65%;
+  margin: 30px auto;
+  max-width: 300px;
+}
+
+#studentidform .cp_ipselect select {
+  width: 100%;
+  max-width: 300px;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
   border: none;
-  border-radius: 0;
   outline: none;
+  background: transparent;
+  background-image: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+       appearance: none;
+}
+
+#studentidform .cp_ipselect select::-ms-expand {
+  display: none;
+}
+
+#studentidform .cp_ipselect.cp_sl04 {
+  position: relative;
+  border-radius: 2px;
+  border: 5px solid #01ff2b;
+  -webkit-box-shadow: 0 0 0 5px #01e1ff, 0 0 0 10px #1201ff, 0 0 0 15px #8d01ff, 0 0 0 20px #ff01c0;
+          box-shadow: 0 0 0 5px #01e1ff, 0 0 0 10px #1201ff, 0 0 0 15px #8d01ff, 0 0 0 20px #ff01c0;
+  border-radius: 50px;
+  background: #fff022;
+}
+
+#studentidform .cp_ipselect.cp_sl04::before {
+  position: absolute;
+  top: 1.3em;
+  right: 0.8em;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #ff0101;
+  pointer-events: none;
+}
+
+#studentidform .cp_ipselect.cp_sl04 select {
+  padding: 8px 38px 8px 18px;
+  color: #000;
 }
 
 #studentidform button {
