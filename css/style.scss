@@ -28,10 +28,6 @@ $sp: 480px;  // スマホ
   }
 }
 
-body {
-	margin: 10 10 10 10;
-}
-
 header {
 	text-align: center;
 	max-width: 100%;
@@ -50,13 +46,11 @@ header {
 	img {
 		max-width: 100%;
 	}
-
 }
 
 #wrapper {
 	text-align: center;
 	max-width: 100%;
-	margin: 10 10;
 }
 
 #studentidform {
@@ -94,7 +88,7 @@ header {
 	}
 	
 	/*中身を非表示にしておく*/
-	.hidden_show {
+	.hidden_show1 {
 		height: 0;
 		padding: 0;
 		overflow: hidden;
@@ -103,18 +97,30 @@ header {
 	}
 	
 	/*クリックで中身表示*/
-	.hidden_show_active {
+	.hidden_show_active1 {
 		padding: 10px 0;
 		height: auto;
 		opacity: 1;
 		transition: 0.8s;
 	}
 
-	*{
-		box-sizing: border-box;
-		margin: 0;
+	/*中身を非表示にしておく*/
+	.hidden_show2 {
+		height: 0;
 		padding: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition: 0.8s;
 	}
+	
+	/*クリックで中身表示*/
+	.hidden_show_active2 {
+		padding: 10px 0;
+		height: auto;
+		opacity: 1;
+		transition: 0.8s;
+	}
+
 
 	.modal{
 		display: none;

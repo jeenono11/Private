@@ -56,16 +56,29 @@ function selectboxChange() {
   }
 }
 
-function myfunc() {
-  var index = document.getElementById("hidden_show").selectedIndex;
-  var value = document.getElementById("hidden_show").value;
-  var obj = document.getElementById("hidden_show");
+function myfunc1() {
+  var index = document.getElementById("hidden_show1").selectedIndex;
+  var value = document.getElementById("hidden_show1").value;
+  var obj = document.getElementById("hidden_show1");
   console.log("active");
   var list = obj.classList;
   console.log(list);
-  obj.classList.add("hidden_show_active");
+  obj.classList.add("hidden_show_active1");
   console.log(obj.classList);
 }
+
+
+function myfunc2() {
+  var index = document.getElementById("hidden_show2").selectedIndex;
+  var value = document.getElementById("hidden_show2").value;
+  var obj = document.getElementById("hidden_show2");
+  console.log("active");
+  var list = obj.classList;
+  console.log(list);
+  obj.classList.add("hidden_show_active2");
+  console.log(obj.classList);
+}
+
 
 $(function(){
   $('.js-modal-open').on('click',function(){
