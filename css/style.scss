@@ -222,12 +222,24 @@ header {
 		color: #000;
 	}
 
+	.cp_ipselect.cp_sl04:checked {
+		background-color: #000;
+	}
+
 #num {
 	margin-top: 20px;
 
 	#output {
 		font-size: 30px;
 		display: inline;
+	}
+
+	input {
+		border-radius: 2px;
+		border: 5px solid #01ff2b;
+		box-shadow : 0 0 0 5px #01e1ff, 0 0 0 10px #1201ff, 0 0 0 15px #8d01ff, 0 0 0 20px #ff01c0;
+		border-radius: 50px;
+		background: #fff022;
 	}
 }
 
@@ -259,8 +271,8 @@ header {
 	
 	/*クリックで中身表示*/
 	.hidden_show_active1 {
-		padding: 10px 0;
-		height: auto;
+		padding: 10px 10px 10px 10px 10px;
+		height: 100px;
 		opacity: 1;
 		transition: 0.8s;
 	}
