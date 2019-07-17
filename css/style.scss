@@ -103,13 +103,14 @@ hr {
 input, select {
     vertical-align:middle;
 }
-//リセットCSS
+//リセットCSSここまで
 
-$pc: 1024px; // PC
-$tab: 896px; // タブレット
-$sp: 480px;  // スマホ
 
-// ブレイクポイント
+// //ブレイクポイント
+// $pc: 1024px; // PC
+// $tab: 896px; // タブレット
+// $sp: 480px;  // スマホ
+
 @mixin pc {
   @media (max-width: ($pc)) {
     @content;
@@ -126,25 +127,43 @@ $sp: 480px;  // スマホ
   }
 }
 
-header {
-	text-align: center;
-	max-width: 100%;
-	height: auto;
 
-	@include pc {
-		background-color: red;
-	}
-	  @include tab {
-		background-color: blue;
-	}
-	  @include sp {
-		background-color: yellow;
-	}
-	
+html, body{
+    margin: 0;
+    padding: 0;
+    width:100%;
+	height:100%;
+	text-align: center;
+}
+
+header {
+
+	// max-width: 100%; レスポンシブ対応用
+	// height: auto;
+
+	// @include pc {
+	// 	background-color: red;
+	// }
+	//   @include tab {
+	// 	background-color: blue;
+	// }
+	//   @include sp {
+	// 	background-color: yellow;
+	// }
+	position: sticky;
+	display: block;
+	top: 0px;
+	left: 0px;  
+
 	img {
-		max-width: 100%;
+		margin: 10px 10px 30px 10px;
+		max-width: 90vw;
+		filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.432));
+		z-index: 3;
 	}
 }
+
+//基本要素の指定
 
 #wrapper {
 	text-align: center;
@@ -178,6 +197,7 @@ header {
 		color: #fff;
 		border-style: none;
 		margin: 10px 10px;
+		z-index: 2;
 	 }
 	}
 	

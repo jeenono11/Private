@@ -101,32 +101,28 @@ input, select {
   vertical-align: middle;
 }
 
-header {
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  max-width: 100%;
-  height: auto;
 }
 
-@media (max-width: 1024px) {
-  header {
-    background-color: red;
-  }
-}
-
-@media (max-width: 896px) {
-  header {
-    background-color: blue;
-  }
-}
-
-@media (max-width: 480px) {
-  header {
-    background-color: yellow;
-  }
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  display: block;
+  top: 0px;
+  left: 0px;
 }
 
 header img {
-  max-width: 100%;
+  margin: 10px 10px 30px 10px;
+  max-width: 90vw;
+  -webkit-filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.432));
+          filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.432));
+  z-index: 3;
 }
 
 #wrapper {
@@ -158,6 +154,7 @@ header img {
   color: #fff;
   border-style: none;
   margin: 10px 10px;
+  z-index: 2;
 }
 
 #output {
