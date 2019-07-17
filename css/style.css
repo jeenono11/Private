@@ -7,7 +7,7 @@
 }
 
 body {
-  margin: 5vw;
+  margin: 10 10 10 10;
 }
 
 header {
@@ -74,7 +74,6 @@ header img {
   display: inline;
 }
 
-/*チェックは見えなくする*/
 /*中身を非表示にしておく*/
 .hidden_show {
   height: 0;
@@ -92,5 +91,55 @@ header img {
   opacity: 1;
   -webkit-transition: 0.8s;
   transition: 0.8s;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.modal {
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.modal__bg {
+  background: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+
+.modal__content {
+  background: #fff;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 60%;
+}
+
+#pageloading-wrap {
+  background: #466bda;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: table;
+  z-index: 1;
+}
+
+#pageloading-icon {
+  display: table-cell;
+  vertical-align: middle;
 }
 /*# sourceMappingURL=style.css.map */

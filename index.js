@@ -66,3 +66,24 @@ function myfunc() {
   obj.classList.add("hidden_show_active");
   console.log(obj.classList);
 }
+
+$(function(){
+  $('.js-modal-open').on('click',function(){
+      $('.js-modal').fadeIn();
+      return false;
+  });
+  $('.js-modal-close').on('click',function(){
+      $('.js-modal').fadeOut();
+      return false;
+  });
+});
+
+$(function(){
+  $(window).on('load',function(){
+    $("#pageloading-wrap").delay(1000).fadeOut('slow');
+  });
+  function loaderClose(){
+    $("#pageloading-wrap").fadeOut('slow');
+  }
+  setTimeout(loaderClose,10000);
+});

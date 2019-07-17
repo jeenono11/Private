@@ -11,47 +11,55 @@
 <meta property="og:description" content="記事の要約（ディスクリプション）" />
 <meta property="og:image" content="http://www.hama-midorinokyokai.or.jp/zoo/kanazawa/animal/assets_c/2016/01/173-2-thumb-450xauto-2615.jpg"/>
 <title>わせだどうぶつパラダイス</title>
-<link rel="stylesheet" href="./css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="./index.js"></script>
+<link rel="stylesheet" href="./css/style.css">
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
 </head>
 
 <body>
+
     <header>
         <h1><a href="index.html"><img src="./img/logo_anipara.png" alt="わせだアニマルパラダイス"></a></h1>
     </header>
     <div id="wrapper">
-            <div id="studentidform">
-                <form class="number" name="fm1" method="get" action="result.html" onchange="selectboxChange();">
-                    <label>学部を選択してね</label>
-                    <select id="fuculty" name="num2" onchange="myfunc();">
-                        <option>---</option>
-                        <option value="A">政治経済学部</option>
-                        <option value="B">法学部</option>
-                        <option value="E">教育学部</option>
-                        <option value="F">商学部</option>
-                        <option value="H">社会科学部</option>
-                        <option value="J">人間科学部</option>
-                        <option value="K">スポーツ科学部</option>
-                        <option value="M">国際教養学部</option>
-                        <option value="T">文化構想学部</option>
-                        <option value="U">文学部</option>
-                        <option value="W">基幹理工学部</option>
-                        <option value="X">創造理工学部</option>
-                        <option value="Y">先進理工学部</option>
-                    </select>
-                    <div id="hidden_show" class="hidden_show">
-                      <!--非表示ここから-->
-                            <div id="output"></div>
-                            <input type="tel" pattern="^[0-9]+$" placeholder="1" size="2" maxlength="1" name="num3" onkeyup="setNextFocus(this)" required/>
-                            <input type="tel" pattern="^[0-9]+$" placeholder="6" size="2" maxlength="1" name="num4" onkeyup="setNextFocus(this)" required/>
-                            <input type="tel" placeholder="0" size="2" maxlength="1" name="num5" onkeyup="setNextFocus(this)" required/>
-                            <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num6" onkeyup="setNextFocus(this)" required/>
-                            <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num7" onkeyup="setNextFocus(this)" required/>
-                            <input type="tel" pattern="^[0-9]+$" placeholder="0" size="2" maxlength="1" name="num8" onkeyup="setNextFocus(this)" required/>
-                            <button type="submit" name="send" value="code">どうぶつさんに<br>なる</button>
-                </form>
-                      <!--ここまで-->
-            </div>
+        <div id="studentidform">
+            <form class="number" name="fm1" method="get" action="result.html" onchange="selectboxChange();">
+                <label>学部を選択してね</label><br>
+                <select id="fuculty" name="num2" onchange="myfunc();" onkeyup="setNextFocus(this);">
+                    <option>学部を選択してね</option>
+                    <option value="A">政治経済学部</option>
+                    <option value="B">法学部</option>
+                    <option value="E">教育学部</option>
+                    <option value="F">商学部</option>
+                    <option value="H">社会科学部</option>
+                    <option value="J">人間科学部</option>
+                    <option value="K">スポーツ科学部</option>
+                    <option value="M">国際教養学部</option>
+                    <option value="T">文化構想学部</option>
+                    <option value="U">文学部</option>
+                    <option value="W">基幹理工学部</option>
+                    <option value="X">創造理工学部</option>
+                    <option value="Y">先進理工学部</option>
+                </select>
+                <!--非表示ここから-->
+                <div id="hidden_show" class="hidden_show">
+                    <div id="output"></div>
+                    <input type="tel" pattern="^([a-zA-Z0-9]{6,})$" placeholder="190999" size="10" maxlength="6" name="NumOrigin" onkeyup="setNextFocus(this);" required/><br>
+                    <button type="submit" name="send" value="code" class="js-modal-open">どうぶつさんに<br>なる</button>
+                </div>
+                <!--ここまで-->
+        </div>
     </div>
+        <div class="modal js-modal">
+            <div class="modal__bg js-modal-close"></div>
+            <div class="modal__content">
+                <p>学籍番号は大切な個人情報だよ。扱いには気をつけてね。</p>
+                <button onclick="location.href='./result.html'">どうぶつさんになる</button><br>
+                <a class="js-modal-close" href="">閉じる</a>
+            </form>
+            </div>
+        </div>
 </body>
 </html>
