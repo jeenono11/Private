@@ -77,3 +77,13 @@ $(function(){
       return false;
   });
 });
+
+$(function(){
+  $(window).on('load',function(){
+    $("#pageloading-wrap").delay(1000).fadeOut('slow');
+  });
+  function loaderClose(){
+    $("#pageloading-wrap").fadeOut('slow');
+  }
+  setTimeout(loaderClose,10000);
+});
