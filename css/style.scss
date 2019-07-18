@@ -238,7 +238,7 @@ header {
 		border-radius: 50px;
 		background: #fff022;
 		z-index: 1;
-		padding-left: 40px;
+		padding-left: 43px;
 		padding-right: 70px;
 	}
 
@@ -251,7 +251,7 @@ header {
 	#output {
 		display: inline-block;
 		margin-top: 45px;
-		position: relative; top:2px; right: 194px; 
+		position: relative; top:2px; right: 197px; 
 	}
 }
 
@@ -267,7 +267,7 @@ header {
 		background-color: #000;
 		color: #fff;
 		border-style: none;
-		margin: 10px 10px;
+		margin: 0 auto;
 	}
 }
 
@@ -342,4 +342,11 @@ header {
 #pageloading-icon {
 	display: table-cell;
 	vertical-align: middle;
+}
+
+#result {
+	img{
+		width: 80vw;
+		margin-top: 30px;
+	}
 }
