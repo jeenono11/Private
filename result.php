@@ -1872,10 +1872,8 @@ imagedestroy($dst_img_ogp); //メモリ解放
 		${ $variable_name } = htmlspecialchars( ${ $variable_name } , ENT_QUOTES , 'UTF-8' ) ;
 	}
 
-
-
 	// 出力
-	$html .= '<h2>短縮URL</h2>' ;
+	$shareUrl .= '<h2>短縮URL</h2>' ;
 
 	// 成功時
 	if( isset( $obj->data->url ) && !empty( $obj->data->url ) ) {
@@ -1892,7 +1890,7 @@ imagedestroy($dst_img_ogp); //メモリ解放
 
 	}
 	// ブラウザに[$html]の内容を出力
-	// 運用時はHTMLのヘッダーとフッターを付けましょう。
-    echo $html ;
+    // 運用時はHTMLのヘッダーとフッターを付けましょう。
+    ;
 
 ?>

@@ -68,28 +68,29 @@ function myfunc1() {
 }
 
 function myfunc2(obj){
-  if(obj.value.length >= obj.maxLength){
-    var index = document.getElementById("hidden_show2").selectedIndex;
-    var value = document.getElementById("hidden_show2").value;
-    var obj = document.getElementById("hidden_show2");
-    console.log("active");
-    var list = obj.classList;
-    console.log(list);
-    obj.classList.add("hidden_show_active2");
-    console.log(obj.classList);
+    if(obj.value.length >= obj.maxLength){
+      var index = document.getElementById("hidden_show2").selectedIndex;
+      var value = document.getElementById("hidden_show2").value;
+      var obj = document.getElementById("hidden_show2");
+      console.log("active");
+      var list = obj.classList;
+      console.log(list);
+      obj.classList.add("hidden_show_active2");
+      console.log(obj.classList);
+    }
   }
-}
 
-$(function(){
-  $('.js-modal-open').on('click',function(){
-      $('.js-modal').fadeIn();
-      return false;
+
+  $(function(){
+    $('.js-modal-open').on('click',function(){
+        $('.js-modal').fadeIn();
+        return false;
+    });
+    $('.js-modal-close').on('click',function(){
+        $('.js-modal').fadeOut();
+        return false;
+    });
   });
-  $('.js-modal-close').on('click',function(){
-      $('.js-modal').fadeOut();
-      return false;
-  });
-});
 
 $(function(){
   $(window).on('load',function(){
