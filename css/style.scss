@@ -161,6 +161,7 @@ header {
 	display: block;
 	top: 0px;
 	left: 0px;  
+	// z-index: 30;
 
 	img {
 		margin: 10px 10px 30px 10px;
@@ -175,7 +176,7 @@ header {
 	.cp_ipselect {
 		overflow: hidden;
 		width: 65%;
-		margin: 30px auto;
+		margin: 30px auto 50px auto;
 		max-width: 300px;
 	}
 	.cp_ipselect select {
@@ -225,24 +226,36 @@ header {
 	.cp_ipselect.cp_sl04:checked {
 		background-color: #000;
 	}
+}
 
 #num {
-	margin-top: 20px;
-
-	#output {
-		font-size: 30px;
-		display: inline;
-	}
-
 	input {
 		border-radius: 2px;
 		border: 5px solid #01ff2b;
+		max-width: 240px;
+		height: 40px;
 		box-shadow : 0 0 0 5px #01e1ff, 0 0 0 10px #1201ff, 0 0 0 15px #8d01ff, 0 0 0 20px #ff01c0;
 		border-radius: 50px;
 		background: #fff022;
+		z-index: 1;
+		padding-left: 40px;
+		padding-right: 70px;
+	}
+
+	input::placeholder {
+		opacity: 0.3;
+		margin: 10 10;
+		position: relative;
+	}
+
+	#output {
+		display: inline-block;
+		margin-top: 45px;
+		position: relative; top:2px; right: 197px; 
 	}
 }
 
+#hidden_show2 {
 	button {
 		width: 60vw;
 		height: 60vw;
@@ -255,80 +268,78 @@ header {
 		color: #fff;
 		border-style: none;
 		margin: 10px 10px;
-		z-index: 2;
-	 }
 	}
+}
 
-	
-	/*中身を非表示にしておく*/
-	.hidden_show1 {
-		height: 0;
-		padding: 0;
-		overflow: hidden;
-		opacity: 0;
-		transition: 0.8s;
-	}
-	
-	/*クリックで中身表示*/
-	.hidden_show_active1 {
-		padding: 10px 10px 10px 10px 10px;
-		height: 100px;
-		opacity: 1;
-		transition: 0.8s;
-	}
+/*中身を非表示にしておく*/
+.hidden_show1 {
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: 0.8s;
+}
 
-	/*中身を非表示にしておく*/
-	.hidden_show2 {
-		height: 0;
-		padding: 0;
-		overflow: hidden;
-		opacity: 0;
-		transition: 0.8s;
-	}
-	
-	/*クリックで中身表示*/
-	.hidden_show_active2 {
-		padding: 10px 0;
-		height: auto;
-		opacity: 1;
-		transition: 0.8s;
-	}
+/*クリックで中身表示*/
+.hidden_show_active1 {
+	padding: 10px 10px 10px 10px 10px;
+	height: 150px;
+	opacity: 1;
+	transition: 0.8s;
+}
 
-	.modal{
-		display: none;
-		height: 100vh;
-		position: fixed;
-		top: 0;
-		width: 100%;
-	}
-	.modal__bg{
-		background: rgba(0,0,0,0.8);
-		height: 100vh;
-		position: absolute;
-		width: 100%;
-	}
-	.modal__content{
-		background: #fff;
-		left: 50%;
-		padding: 40px;
-		position: absolute;
-		top: 50%;
-		transform: translate(-50%,-50%);
-		width: 60%;
-	}
+/*中身を非表示にしておく*/
+.hidden_show2 {
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: 0.8s;
+}
 
-	#pageloading-wrap {
-		background: #466bda;
-		width: 100%;
-		height: 100%;
-		position: fixed;
-		top: 0;
-		left: 0;
-		text-align: center;
-		display: table;
-		z-index: 1;
-	 }
-	 #pageloading-icon {
-		display: table-cell;
-		vertical-align: middle;
-	 }
+/*クリックで中身表示*/
+.hidden_show_active2 {
+	padding: 10px 0;
+	height: auto;
+	opacity: 1;
+	transition: 0.8s;
+}
+
+.modal{
+	display: none;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.modal__bg{
+	background: rgba(0,0,0,0.8);
+	height: 100vh;
+	position: absolute;
+	width: 100%;
+}
+.modal__content{
+	background: #fff;
+	left: 50%;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 60%;
+}
+
+#pageloading-wrap {
+	background: #466bda;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-align: center;
+	display: table;
+	z-index: 1;
+}
+#pageloading-icon {
+	display: table-cell;
+	vertical-align: middle;
+}
