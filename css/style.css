@@ -136,7 +136,7 @@ header img {
 #studentidform .cp_ipselect {
   overflow: hidden;
   width: 65%;
-  margin: 30px auto;
+  margin: 30px auto 50px auto;
   max-width: 300px;
 }
 
@@ -191,16 +191,57 @@ header img {
   color: #000;
 }
 
-#studentidform #num {
-  margin-top: 20px;
+#studentidform .cp_ipselect.cp_sl04:checked {
+  background-color: #000;
 }
 
-#studentidform #num #output {
-  font-size: 30px;
-  display: inline;
+#num input {
+  border-radius: 2px;
+  border: 5px solid #01ff2b;
+  max-width: 240px;
+  height: 40px;
+  -webkit-box-shadow: 0 0 0 5px #01e1ff, 0 0 0 10px #1201ff, 0 0 0 15px #8d01ff, 0 0 0 20px #ff01c0;
+          box-shadow: 0 0 0 5px #01e1ff, 0 0 0 10px #1201ff, 0 0 0 15px #8d01ff, 0 0 0 20px #ff01c0;
+  border-radius: 50px;
+  background: #fff022;
+  z-index: 1;
+  padding-left: 40px;
+  padding-right: 70px;
 }
 
-#studentidform button {
+#num input::-webkit-input-placeholder {
+  opacity: 0.3;
+  margin: 10 10;
+  position: relative;
+}
+
+#num input:-ms-input-placeholder {
+  opacity: 0.3;
+  margin: 10 10;
+  position: relative;
+}
+
+#num input::-ms-input-placeholder {
+  opacity: 0.3;
+  margin: 10 10;
+  position: relative;
+}
+
+#num input::placeholder {
+  opacity: 0.3;
+  margin: 10 10;
+  position: relative;
+}
+
+#num #output {
+  display: inline-block;
+  margin-top: 45px;
+  position: relative;
+  top: 2px;
+  right: 197px;
+}
+
+#hidden_show2 button {
   width: 60vw;
   height: 60vw;
   max-height: 300px;
@@ -212,7 +253,6 @@ header img {
   color: #fff;
   border-style: none;
   margin: 10px 10px;
-  z-index: 2;
 }
 
 /*中身を非表示にしておく*/
@@ -227,8 +267,8 @@ header img {
 
 /*クリックで中身表示*/
 .hidden_show_active1 {
-  padding: 10px 0;
-  height: auto;
+  padding: 10px 10px 10px 10px 10px;
+  height: 150px;
   opacity: 1;
   -webkit-transition: 0.8s;
   transition: 0.8s;
